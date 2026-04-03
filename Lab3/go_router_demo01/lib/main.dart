@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-// HomeScreen
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -19,7 +19,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// DetailsScreen
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
@@ -32,7 +31,6 @@ class DetailsScreen extends StatelessWidget {
   }
 }
 
-// App widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -46,7 +44,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Entry point
 void main() => runApp(const MyApp());
 
 // Router configuration

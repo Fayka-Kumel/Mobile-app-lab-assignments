@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-// HomeScreen using named navigation
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -15,12 +14,11 @@ class HomeScreen extends StatelessWidget {
           onPressed: () => context.goNamed('details'),
           child: const Text('Go to Details'),
         ),
-      ), // Center
-    ); // Scaffold
+      ), 
+    ); 
   }
 }
 
-// DetailsScreen
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
@@ -33,15 +31,7 @@ class DetailsScreen extends StatelessWidget {
   }
 }
 
-// Router configuration with named routes
-final _router = GoRouter(
-  routes: [
-    GoRoute(path: '/', name: 'home', builder: (_, _) => const HomeScreen()),
-    GoRoute(path: '/details', name: 'details', builder: (_, _) => const DetailsScreen()),
-  ],
-);
 
-// App widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -55,5 +45,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Entry point
+
 void main() => runApp(const MyApp());
+
+final _router = GoRouter(
+  routes: [
+    GoRoute(path: '/', name: 'home', builder: (_, _) => const HomeScreen()),
+    GoRoute(path: '/details', name: 'details', builder: (_, _) => const DetailsScreen()),
+  ],
+);
+
